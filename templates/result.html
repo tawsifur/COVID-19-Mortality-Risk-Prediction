@@ -14,9 +14,10 @@
 
         <!-- Website Title -->
 		<div class="container">
-            <h2 class='container-heading'><span class="heading_font">COVID-19 mortality risk prediction</span></h2>
+            <h2 class='container-heading'><span class="heading_font">COVID-19 mortality risk prediction</span></h2><br>
             <div class='description'>
-    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    			<p>(An early warning tool for predicting mortality risk of COVID-19 patients using LNLCA score.)</p><br>
+    			<p><a href="https://arxiv.org/ftp/arxiv/papers/2007/2007.15559.pdf">Please read the article</a></p>
     		</div>
     	</div>
 
@@ -24,24 +25,24 @@
 		<div class="results">
 			{% if prediction>0.5 %}
 				<h1>Prediction: <span class='danger'>Patient mortality risk is high, please take proper step.</span></h1>
-				<img class="gif" src="{{ url_for('static', filename='diabetes.webp') }}" alt="Diabetes Image">
+				<img class="gif" src="{{ url_for('static', filename='High.png') }}" alt="Diabetes Image">
                         {% elif prediction<=0.5 and prediction>0.05 %}
 				<h1>Prediction: <span class='danger'>Patient mortality risk is moderate.</span></h1>
-				<img class="gif1" src="{{ url_for('static', filename='diabetes.webp') }}" alt="Diabetes Image">
+				<img class="gif" src="{{ url_for('static', filename='Moderate.png') }}" alt="Diabetes Image">
 			
 			{% elif prediction<=0.05 %}
 				<h1>Prediction: <span class='safe'>Great! Patient mortality risk is low.</span></h1>
-				<img class="gif1" src="{{ url_for('static', filename='no-diabetes.webp') }}" alt="Not Diabetes Image">
+				<img class="gif1" src="{{ url_for('static', filename='Safe.jpg') }}" alt="Not Diabetes Image">
 			{% endif %}
 		</div>
 
 		<!-- Footer -->
        <div class='footer'>
            <div class="contact">
-               <a target="_blank" href="https://sites.google.com/view/tawsifurrahman/home?authuser=0"><i class="fab fa-github fa-lg contact-icon"></i></a>
-               <a target="_blank" href="https://scholar.google.com/citations?user=Qv3rubEAAAAJ&hl=en"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://sites.google.com/view/tawsifurrahman/home?authuser=0"><i class="fas fa-globe fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://scholar.google.com/citations?user=Qv3rubEAAAAJ&hl=en"><i class="fas fa-graduation-cap fa-lg contact-icon"></i></a>
            </div>
-           <p class='footer-description'>Made with ❤️ by Tawsifur Rahman.</p>
+           <p class='footer-description'>Made by Tawsifur Rahman.</p>
        </div>
 
 	</body>
