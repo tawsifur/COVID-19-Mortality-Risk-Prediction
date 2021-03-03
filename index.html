@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>First Innings Score Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">COVID-19 mortality risk prediction</span></h2><br>
+            <div class='description'>
+    			<p>(An early warning tool for predicting mortality risk of COVID-19 patients using LNLCA score.)</p><br>
+    			<p> <a href="https://arxiv.org/ftp/arxiv/papers/2007/2007.15559.pdf">Please read the article</a></p>
+    		</div>
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+            <!-- Prediction Form -->
+            <div class="ml-container">
+    		  <form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="Age" placeholder="please put patient's age eg. 70"><br>
+                <input class="form-input" type="text" name="CRP" placeholder="hsCRP(mg/L) eg. 26.3"><br>
+                <input class="form-input" type="text" name="Lymphocyte" placeholder="Lymphocyte (%) eg. 6.7"><br>
+                <input class="form-input" type="text" name="Neutrophils" placeholder="Neutrophils (%) eg. 89.2"><br>
+                <input class="form-input" type="text" name="LDH" placeholder="Lactate dehydrogenase (u/L) eg. 495"><br>
+                
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	  </form>
+    	    </div>
+
+            <!-- IPL Banner - 1 -->
+            <div class='ipl-banner-left'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-up">
+                        <!-- Image-1 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='Nomo4.png') }}" alt="Nomogram">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+           
+
+            
+        </div>
+
+        <!-- Footer -->
+        <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://sites.google.com/view/tawsifurrahman/home?authuser=0"><i class="fas fa-globe fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://scholar.google.com/citations?user=Qv3rubEAAAAJ&hl=en"><i class="fas fa-graduation-cap fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made by Tawsifur Rahman.</p>
+       </div>
+
+    </body>
+</html>
