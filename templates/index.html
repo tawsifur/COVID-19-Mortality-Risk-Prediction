@@ -9,9 +9,9 @@
 
 <body>
 
-    <div style="color:blue">
+    <div>
         <form action="{{ url_for('predict')}}" method="post">
-            <h2>COVID-19 mortality risk prediction</h2>
+            <h1>COVID-19 mortality risk prediction</h1>
             <h3>Age</h3>
             <input id="first" name="Age" type="number ">
             <h3>hsCRP(mg/L)</h3><br><input id="second" name="CRP" required="required">
@@ -151,6 +151,14 @@
             text-align: center;
         }
     </style>
+    <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://sites.google.com/view/tawsifurrahman/home?authuser=0"><i class="fab fa-home fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://scholar.google.com/citations?user=Qv3rubEAAAAJ&hl=en"><i class="fab fa-graduation-cap fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made with ❤️ by Tawsifur Rahman.</p>
+       
+    </div>
 </body>
 
 </html>
